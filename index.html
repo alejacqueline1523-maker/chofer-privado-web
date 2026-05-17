@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chofer Privado</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <div class="caja">
+
+            <h1>Chofer Privado</h1>
+
+            <p class="subtitulo">
+                Bienvenido, selecciona una opción
+            </p>
+
+            <div class="botones">
+
+                <button onclick="mostrarFormulario('equipo')">
+                    Formar parte del equipo
+                </button>
+
+                <button onclick="mostrarFormulario('cliente')">
+                    Solicitar chofer privado
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- FORMULARIO EQUIPO -->
+
+    <div class="formulario oculto" id="formEquipo">
+
+        <div class="form-box">
+
+            <h2>Registro de Chofer</h2>
+
+            <input type="text" id="nombreEquipo" placeholder="Nombre completo">
+
+            <input type="tel" id="telefonoEquipo" placeholder="Número de teléfono">
+
+            <input type="text" id="nacionalidad" placeholder="Nacionalidad">
+
+            <input type="text" id="idiomas" placeholder="Idiomas hablados">
+
+            <input type="text" id="licencia" placeholder="¿Tiene licencia de conducir?">
+
+            <input type="number" id="edad" placeholder="Edad">
+
+            <textarea id="experiencia" placeholder="Experiencia laboral"></textarea>
+
+            <button onclick="enviarEquipo()">
+                Enviar Registro
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- FORMULARIO CLIENTE -->
+
+    <div class="formulario oculto" id="formCliente">
+
+        <div class="form-box">
+
+            <h2>Solicitar Chofer</h2>
+
+            <input type="text" id="nombreCliente" placeholder="Nombre">
+
+            <input type="tel" id="telefonoCliente" placeholder="Número de teléfono">
+
+            <button onclick="enviarCliente()">
+                Solicitar
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
