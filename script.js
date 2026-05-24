@@ -70,9 +70,7 @@ function enviarEquipo() {
 
 Mi nombre es ${datos.nombre}
 
-Mi teléfono es ${datos.telefono}
-
-Me gustaría tener una primera entrevista`;
+Mi teléfono es ${datos.telefono} Me gustaría tener una primera entrevista`;
 
 
 
