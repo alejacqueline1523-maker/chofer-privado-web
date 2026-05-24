@@ -25,83 +25,25 @@ function mostrarFormulario(tipo) {
 
 function enviarEquipo() {
 
-    function doPost(e) {
+    let datos = {
 
-        var data = JSON.parse(e.postData.contents);
+        tipo: "chofer",
 
+        nombre: document.getElementById("nombreEquipo").value,
 
+        telefono: document.getElementById("telefonoEquipo").value,
 
+        nacionalidad: document.getElementById("nacionalidad").value,
 
+        idiomas: document.getElementById("idiomas").value,
 
-        if (data.tipo === "chofer") {
+        licencia: document.getElementById("licencia").value,
 
-            var hojaChoferes =
-                SpreadsheetApp
-                    .getActiveSpreadsheet()
-                    .getSheetByName("Choferes");
+        edad: document.getElementById("edad").value,
 
+        experiencia: document.getElementById("experiencia").value
 
-
-            hojaChoferes.appendRow([
-
-                new Date(),
-
-                data.nombre,
-
-                data.telefono,
-
-                data.nacionalidad,
-
-                data.idiomas,
-
-                data.licencia,
-
-                data.edad,
-
-                data.experiencia
-
-            ]);
-
-        }
-
-
-
-
-
-
-
-
-        if (data.tipo === "cliente") {
-
-            var hojaSolicitudes =
-                SpreadsheetApp
-                    .getActiveSpreadsheet()
-                    .getSheetByName("Solicitudes");
-
-
-
-            hojaSolicitudes.appendRow([
-
-                new Date(),
-
-                data.nombre,
-
-                data.telefono
-
-            ]);
-
-        }
-
-
-
-
-
-
-        return ContentService
-            .createTextOutput("Correcto")
-            .setMimeType(ContentService.MimeType.TEXT);
-
-    }
+    };
 
 
 
@@ -117,9 +59,11 @@ function enviarEquipo() {
 
         .then(response => {
 
+           
 
 
-            let numero = "526642877406";
+
+            let numero = "526981008100";
 
             let mensaje =
                 `Hola, acabo de registrarme como chofer privado.
@@ -185,7 +129,7 @@ function enviarCliente() {
 
         .then(response => {
 
-            let numero = "526642877406";
+            let numero = "526981008100";
 
             let mensaje =
                 `Hola, quiero solicitar un chofer privado.
