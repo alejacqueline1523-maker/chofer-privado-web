@@ -66,11 +66,11 @@ function enviarEquipo() {
             let numero = "526981008100";
 
             let mensaje =
-                `Hola, acabo de registrarme como chofer privado.
+                `Hola, acabo de registrarme como chofer privado. Me gustaría tener una primera entrevista.
 
 Mi nombre es ${datos.nombre}
 
-Mi teléfono es ${datos.telefono} Me gustaría tener una primera entrevista`;
+Mi teléfono es ${datos.telefono}`;
 
 
 
